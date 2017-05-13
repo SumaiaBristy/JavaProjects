@@ -1,0 +1,9 @@
+package comm.example;
+
+public class Book {
+	
+	private int bookId;
+	private String authorkName;
+	private double bookPrice;
+
+}

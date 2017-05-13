@@ -1,0 +1,11 @@
+package comm.example;
+
+import java.io.Serializable;
+
+public class Employeee implements Serializable {
+	
+	protected int id;
+	protected String name;
+	
+
+}

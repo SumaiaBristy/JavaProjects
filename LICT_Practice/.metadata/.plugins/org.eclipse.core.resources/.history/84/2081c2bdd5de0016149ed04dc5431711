@@ -1,0 +1,42 @@
+package comm.example;
+
+import java.util.Scanner;
+
+import javax.transaction.Transaction;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class Tester {
+	static Scanner sc=new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try{
+		
+	Insurance insurance=new Insurance();
+	
+	System.out.println("ID: ");
+	insurance.setInsurance_id(sc.nextInt());
+	System.out.println("Name: ");
+	insurance.setInsurance_name(sc.next());
+	System.out.println("Amount: ");
+	insurance.setInsurance_amount(sc.nextFloat());
+	SessionFactory factory=new Configuration().configure().buildSessionFactory();
+	Session session=factory.openSession();
+	org.hibernate.Transaction tr=session.beginTransaction();
+	session.persist(insurance);
+	tr.commit();
+	System.out.println("Transaction successful\n");
+	
+	}
+	catch(Exception e)
+	{
+		e.printStackTrace();
+		
+	}
+	
+	}
+
+}

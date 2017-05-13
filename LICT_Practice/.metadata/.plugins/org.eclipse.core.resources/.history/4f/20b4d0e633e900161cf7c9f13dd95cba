@@ -1,0 +1,24 @@
+package comm.example;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class TesterExpConstructor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		try{
+			ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+			Book book=(Book)context.getBean("bb");
+			System.out.println(""+book.getBookDetails());
+			}
+			catch(Exception e)
+			{
+				
+				e.printStackTrace();
+			}
+
+	}
+
+}

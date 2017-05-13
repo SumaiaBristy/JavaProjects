@@ -1,0 +1,12 @@
+package comm.example;
+
+public class Person {
+	private String name;
+	
+	public String getDetails()
+	{
+		
+		
+	}
+
+}

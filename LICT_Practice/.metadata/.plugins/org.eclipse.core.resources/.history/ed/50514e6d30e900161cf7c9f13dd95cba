@@ -1,0 +1,9 @@
+package comm.example;
+
+import org.springframework.context.ApplicationContext;
+
+public class Tester {
+	
+	ApplicationContext context=
+
+}

@@ -1,0 +1,11 @@
+package comm.example;
+
+import java.io.Serializable;
+
+public class Insurance implements Serializable {
+	
+	private int insurance_id;
+	private String insurance_name;
+	private float insurance_amount;
+
+}

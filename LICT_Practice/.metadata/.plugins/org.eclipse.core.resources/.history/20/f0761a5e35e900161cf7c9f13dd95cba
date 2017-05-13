@@ -1,0 +1,12 @@
+package comm.example;
+
+public class Employee extends Person {
+	
+	@Override
+	public String getDetails()
+	{
+		return super.getDetails()+"id: "+getId()+" salary: "+getSalary();
+		
+	}
+
+}

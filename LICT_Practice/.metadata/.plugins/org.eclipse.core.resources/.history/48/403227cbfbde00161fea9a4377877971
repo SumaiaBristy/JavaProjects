@@ -1,0 +1,15 @@
+package comm.example;
+
+import java.io.Serializable;
+
+public class Regular_Employee extends Employeee implements Serializable {
+	
+	private float salary;
+	private float bonus;
+	public Regular_Employee() {
+		super();
+	}
+	
+	
+
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean name="b" class="comm.example.Book">
+	<!-- -
+	<property name="bookId" value="100"/>
+	<property name="authorkName" value="james"/>
+	<property name="bookPrice" value="236523"/>
+	 -->
+	 
+	 <constructor-arg index="0" name=""> </constructor-arg>
+	</bean>
+</beans>

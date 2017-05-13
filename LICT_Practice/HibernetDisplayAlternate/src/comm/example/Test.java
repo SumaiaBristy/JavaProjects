@@ -1,0 +1,71 @@
+package comm.example;
+
+
+
+import java.awt.List;
+import java.util.Iterator;
+import java.util.Scanner;
+
+import org.hibernate.Criteria;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.criterion.Criterion;
+import org.hibernate.criterion.Restrictions;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Customer cus=new Customer();
+		SessionFactory factory=new Configuration().configure().buildSessionFactory();
+		Session session=factory.openSession();
+		org.hibernate.Transaction tr=session.beginTransaction();
+		String str="from Customer";
+	    Query q=session.createQuery(str);
+		//Criteria crit=session.createCriteria(Customer.class);
+		//List results=crit.list();
+	    Iterator i=q.iterate();
+	    System.out.println("ID\tFirst Name\t Last name\tAmount\n=======\n");
+	    while(i.hasNext())
+	    {
+	    	
+	    	Customer cc=(Customer)i.next();
+	    	System.out.println(cc.getId()+"\t"+cc.getFirstname()+"\t"+cc.getLastname()+"\t"+cc.getAmount());
+	    	
+	    }
+		
+		
+		/*Criteria cr=session.createCriteria(Customer.class); //query er jaygay criteria use korele onek fast tai
+		cr.setFirstResult(2);
+		cr.setMaxResults(15);
+		java.util.List<Customer> l=cr.list(); //if we dont set any criteria then list() will byddefault select the all data from table
+		
+		
+		
+		Criterion nameRestriction=Restrictions.like("firstname","shin%");
+		cr.add(nameRestriction);
+		for(Customer c:l)
+		{
+			System.out.println(c.getFirstname());
+			
+		}*/
+	    
+	    System.out.println("enter id to search");
+	    int id=new Scanner(System.in).nextInt();
+	    Customer c=(Customer)session.get(Customer.class,id);
+	    //System.out.println("enter name to search");
+	   // String ss=new Scanner(System.in).next();
+	   // Customer c=(Customer)session.get(Customer.class,ss);
+	    if(c!=null)
+	    {
+	    	System.out.println(c.getId());
+	    	
+	    }
+	    else System.out.println("no record");
+
+	}
+
+}

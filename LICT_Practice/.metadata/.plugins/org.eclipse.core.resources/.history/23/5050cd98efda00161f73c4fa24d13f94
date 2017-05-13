@@ -1,0 +1,31 @@
+package comm.example;
+
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class HelloSwing extends JFrame{
+	
+	
+	//ekhon sob component gulake variable hisebe nibo
+	private JTextField t1=null;
+	private JLabel l1=null;
+	private JButton b1=null;
+
+	public HelloSwing() {
+		super(); //super means frame er constructor k call korbe
+		l1=new JLabel("Enter your name: ");
+		t1=new JTextField(20);
+		this.setLayout(new FlowLayout()); //basic layout manager flowlayout means ektar por ekta add hobe component gula
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

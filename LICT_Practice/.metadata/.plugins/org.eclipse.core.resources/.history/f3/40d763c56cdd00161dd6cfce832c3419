@@ -1,0 +1,19 @@
+package comm.example;
+
+import java.util.Scanner;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		
+	Insurance insurance=new Insurance();
+	
+	System.out.println("ID: "+insurance.setInsurance_id(sc.nextInt()));
+	System.out.println("Name: "+insurance.setInsurance_name(sc.next());
+	System.out.println("Amount: "+insurance.setInsurance_amount(sc.nextFloat());
+	
+	}
+
+}

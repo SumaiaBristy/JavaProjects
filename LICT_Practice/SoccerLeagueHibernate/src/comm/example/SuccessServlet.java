@@ -1,0 +1,58 @@
+package comm.example;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import comm.example.League;
+
+@WebServlet("/success_page.view")
+public class SuccessServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+	{
+		processRequest(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+	{
+		processRequest(request, response);
+	}
+
+	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+	{
+		League ll=new League();
+		ll.setId(ll.getId());
+		ll.setTitle(ll.getTitle());
+		ll.setYear(ll.getYear());
+		ll.setSeason(ll.getSeason());
+		
+		SessionFactory factory=new Configuration().configure().buildSessionFactory();
+	    Session session=factory.openSession();
+	    org.hibernate.Transaction tr=session.beginTransaction();
+        session.persist(ll);
+		tr.commit();
+		System.out.println("Transaction successful\n");
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		League league = (League) request.getAttribute("LEAGUE");
+		out.println("League Added Successfully<br/>");
+		out.println("ID" + league.getId() + "<br/>");
+		out.println("Title" + league.getTitle() + "<br/>");
+		out.println("Year" + league.getYear() + "<br/>");
+		out.println("Season" + league.getSeason() + "<br/>");
+		out.println("<a href='admin/add_league.html'>Add Another League</a>");
+
+	}
+
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<h3 id="heading-1" class="ui-bar ui-bar-a ui-corner-all">Duke's soccer's League</h3>
+	
+	<div class="ui-body ui-body-a ui-corner-all">
+		<p>Add League Page</p>
+	</div>
+	
+	<form  action="http://localhost:1234/Soccer_League/add_league.servlet" method="post">
+		<table >
+		       <tr>
+					<td><label id="label-1">Serial No</label></td>
+					<td>
+						<input id="input-1" name="title"   type="text"/>
+					</td>
+				</tr>
+				<tr>
+					<td><label id="label-1">Title</label></td>
+					<td>
+						<input id="input-1" name="title"   type="text"/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><label id="label-1">Year</label></td>
+					<td>
+						<input id="input-1" name="year"  type="text"/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><label id="label-1">Season</label></td>
+					<td>
+						<select name="season">
+							<option value="UNKNOWN">Select</option>
+							<option value="Summer">Summer</option>
+							<option value="Winter">Winter</option>
+							<option value="Autumn">Autumn</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+				<td><input type="submit" value="Submit" /></td>
+				</tr>
+				
+				</table>
+				
+	</form>
+</body>
+</html>

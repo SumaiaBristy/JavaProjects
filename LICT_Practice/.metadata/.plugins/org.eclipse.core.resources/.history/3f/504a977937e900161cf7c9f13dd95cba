@@ -1,0 +1,23 @@
+package comm.example;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Tester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext context=new ClassPathXmlApplicationContext("aplicationContext.xml");
+		
+		Employee emp=(Employee)context.getBean("employeeBean");
+		System.out.println(emp.getDetails().toString());
+		try {
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+
+	}
+
+}

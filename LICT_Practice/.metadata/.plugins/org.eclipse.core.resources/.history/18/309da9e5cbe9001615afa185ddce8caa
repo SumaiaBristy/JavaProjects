@@ -1,0 +1,8 @@
+package comm.example;
+
+public class Address {
+	private String laneNo;
+	private String city;
+	private String phoneNo;
+
+}

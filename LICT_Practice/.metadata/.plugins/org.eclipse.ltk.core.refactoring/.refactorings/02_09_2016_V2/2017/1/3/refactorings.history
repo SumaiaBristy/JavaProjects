@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;OracleConnectionFactory.java&apos; to &apos;17_01_17(dataInsertFromDatabase)/src/comm.example&apos;&#x0D;&#x0A;- Original project: &apos;02_09_2016_V2&apos;&#x0D;&#x0A;- Destination element: &apos;17_01_17(dataInsertFromDatabase)/src/comm.example&apos;&#x0D;&#x0A;- Original element: &apos;comm.example.OracleConnectionFactory.java&apos;" description="Copy compilation unit" destination="=17_01_17\(dataInsertFromDatabase)/src&lt;comm.example" element1="/src&lt;comm.example{OracleConnectionFactory.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1484632184958" units="1" version="1.0"/>
+</session>

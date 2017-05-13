@@ -1,0 +1,17 @@
+package comm.example;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Tester {
+	try{
+	ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+	Book book=(Book)context.getBean("b");
+	}
+	catch(Exception e)
+	{
+		
+		e.printStackTrace();
+	}
+	
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;01_01_17(dataInsertFromDatabase)&apos; to &apos;17_01_17(dataInsertFromDatabase)&apos;" description="Rename resource &apos;01_01_17(dataInsertFromDatabase)&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/01_01_17(dataInsertFromDatabase)" name="17_01_17(dataInsertFromDatabase)" stamp="1484629834123" updateReferences="true"/>
+</session>
